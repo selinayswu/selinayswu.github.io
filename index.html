@@ -921,6 +921,25 @@ body{background:#fbfaff}
   .g-aura{animation:none}
   *{transition-duration:.01ms!important}
 }
+
+/* ============ phone: legible, uncluttered chrome (kept last so it wins) ============ */
+@media (max-width:720px){
+  .nav{background:#ffffff!important;z-index:44!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:0 1px 0 rgba(16,41,74,.07)}
+  .tabs{background:rgba(255,255,255,.97)!important;backdrop-filter:blur(18px) saturate(1.4)!important;-webkit-backdrop-filter:blur(18px) saturate(1.4)!important;box-shadow:0 -1px 0 rgba(16,41,74,.08),0 -10px 30px rgba(16,41,74,.10)}
+  .tabs a,.tabs a:hover{background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;color:#3a5373!important}
+  .tabs a[aria-current="true"],.tabs a[aria-current="true"]:hover{background:#10294a!important;color:#ffffff!important}
+  /* the chemistry meter sits in the top bar, clear of content */
+  .chem{top:calc(9px + env(safe-area-inset-top,0px))!important;bottom:auto!important;right:12px!important;padding:5px 10px 5px 5px!important;box-shadow:0 4px 14px rgba(16,41,74,.12)!important;z-index:46}
+  .chem-tip{top:calc(62px + env(safe-area-inset-top,0px))!important;bottom:auto!important;right:12px!important;transform:translateY(-6px)!important}
+  .chem-tip.show{transform:none!important}
+  /* nothing hides behind the tab bar */
+  #site{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+  .contact > .wrap{margin:0 12px}
+  /* calmer background on small screens */
+  .bokeh .spk{display:none}
+  /* slightly stronger secondary text */
+  .pc-body .t,.sub,.cv-contact{color:#3a5373}
+}
 </style>
 </head>
 <body>
